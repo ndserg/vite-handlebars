@@ -1,0 +1,241 @@
+@use './_vars' as v;
+
+.logo-link {
+  display: block;
+
+  width: 112px;
+  height: 18px;
+
+  font-size: 0;
+
+  line-height: 0;
+
+  outline: transparent;
+  outline-offset: 5px;
+
+  transition:
+    outline 0.3s,
+    opacity 0.3s;
+
+  &:focus-visible {
+    outline: v.$orange-crayola solid 3px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.btn-primary {
+  display: block;
+
+  padding-top: 12px;
+  padding-right: 23px;
+  padding-bottom: 12px;
+  padding-left: 23px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: v.$white;
+
+  text-decoration: none;
+
+  outline: 3px solid transparent;
+  outline-offset: -3px;
+
+  background-color: v.$orange-crayola;
+  border: none;
+
+  transition:
+    outline 0.3s,
+    background-color 0.3s;
+
+  &:focus-visible {
+    outline-color: v.$titian;
+  }
+
+  &:hover {
+    outline-color: transparent;
+
+    background-color: v.$pearlescent-orange;
+  }
+
+  &:active {
+    background-color: v.$titian;
+  }
+}
+
+.btn-secondary {
+  display: block;
+
+  padding-top: 8px;
+  padding-right: 18px;
+  padding-bottom: 9px;
+  padding-left: 18px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: v.$white;
+
+  text-decoration: none;
+
+  outline: none;
+
+  background-color: transparent;
+  border: 3px solid v.$orange-crayola;
+
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+
+  &:focus-visible {
+    background-color: v.$pearlescent-orange;
+  }
+
+  &:hover {
+    background-color: v.$orange-crayola;
+    border-color: transparent;
+  }
+
+  &:active {
+    background-color: v.$titian;
+  }
+}
+
+.contact-phone {
+  height: 20px;
+
+  padding-left: 20px;
+  margin-top: auto;
+
+  font-family: var(--second-family);
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 20px;
+
+  color: v.$orange-crayola;
+
+  text-decoration: none;
+
+  background-image: url('/src/assets/images/icons/icon_call.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 20px 20px;
+}
+
+.form-fieldset {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+}
+
+.form-input {
+  padding-top: 12px;
+  padding-right: 23px;
+  padding-bottom: 12px;
+  padding-left: 23px;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+
+  color: v.$black-brown;
+
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  background-color: v.$platinum;
+  border: none;
+
+  transition:
+    outline 0.3s,
+    color 0.3s;
+
+  &::placeholder {
+    color: v.$pearlescent-light-gray;
+
+    transition: color 0.3s;
+  }
+
+  &:hover,
+  &:hover::placeholder {
+    color: v.$orange-crayola;
+
+    outline-color: transparent;
+  }
+
+  &:focus {
+    outline-color: v.$orange-crayola;
+  }
+
+  &:active {
+    color: v.$black-brown;
+
+    outline-color: transparent;
+  }
+
+  &:invalid {
+    outline-color: v.$strawberry-red;
+  }
+}
+
+@media (min-width: v.$pre-tablet-width) {
+  .logo-link {
+    width: 166px;
+    height: 27px;
+  }
+}
+
+@media (min-width: v.$tablet-width) {
+  .btn-primary {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 16px;
+  }
+
+  .btn-secondary {
+    padding-top: 12px;
+    padding-right: 19px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+
+    font-size: 16px;
+  }
+
+  .contact-phone {
+    height: 22px;
+
+    font-size: 16px;
+
+    line-height: 22px;
+
+    background-size: 22px 22px;
+  }
+
+  .form-input {
+    padding-top: 15px;
+    padding-bottom: 17px;
+
+    font-size: 16px;
+  }
+}
+
+@media (min-width: v.$desktop-width) {
+  .logo-link {
+    width: 190px;
+    height: 30px;
+  }
+}

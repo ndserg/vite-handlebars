@@ -1,0 +1,26 @@
+{
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "typescript",
+    "typescriptreact"
+  ],
+  "stylelint.enable": true,
+  "stylelint.configFile": "stylelint.config.js",
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "less"
+  ],
+  "css.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSaveMode": "file",
+}

@@ -1,0 +1,56 @@
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --second-family: 'TTFirsNeue', sans-serif;
+}
+
+/* colors */
+$orange-crayola: #ff6e30;
+$pearlescent-orange: #bc572b;
+$titian: #ce4307;
+$light-carmine-pink: #f06666;
+$strawberry-red: #ff3030;
+$dark-peach: #ffd4c1;
+$white: #ffffff;
+$platinum: #e9e9e9;
+$very-pale-blue: #cacaca;
+$pearlescent-light-gray: #999999;
+$gray: #808080;
+$blue-gray: #4a4a4a;
+$black-brown: #202020;
+
+/* viewports */
+$mobile-width: 320px;
+$pre-tablet-width: 628px;
+$tablet-width: 768px;
+$tablet-large: 1024px;
+$desktop-width: 1340px;
+$gap: 30px;
+
+/* MIXINS */
+@mixin badge($top, $right, $p-t, $p-r, $p-b, $p-l) {
+  position: absolute;
+  top: $top;
+  right: $right;
+
+  display: block;
+
+  padding-top: $p-t;
+  padding-right: $p-r;
+  padding-bottom: $p-b;
+  padding-left: $p-l;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  color: $white;
+
+  text-align: center;
+
+  content: attr(data-badge);
+
+  background-color: $black-brown;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,99 @@
+@use './_vars' as v;
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+
+  line-height: normal;
+
+  color: v.$very-pale-blue;
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: v.$tablet-width;
+
+  padding-right: 21px;
+  padding-left: 21px;
+  margin: 0 auto;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: v.$desktop-width;
+
+    padding-right: 27px;
+    padding-left: 27px;
+  }
+
+  @media (min-width: v.$tablet-large) {
+    padding-right: 31px;
+    padding-left: 31px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  display: block;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.section-title {
+  margin: 0;
+
+  font-family: var(--second-family);
+  font-size: 18px;
+  font-weight: 700;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 24px;
+  }
+}

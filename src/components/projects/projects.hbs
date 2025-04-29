@@ -1,0 +1,18 @@
+<section class="projects">
+  <div class="projects__wrapper container">
+    <h2 class="projects__title section-title">Наши проекты</h2>
+    <ul class="projects__list list-reset">
+      {{#each projects as |project|}}
+      {{#if project.simple}}
+      <li class="projects__item">
+        {{> "components/projects/project-simple.hbs" project}}
+      </li>
+      {{else}}
+      <li class="projects__item projects__item--big">
+        {{> "components/projects/project-big.hbs" project}}
+      </li>
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</section>

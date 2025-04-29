@@ -1,0 +1,14 @@
+@use './global';
+@use 'blocks/header';
+@use 'blocks/page-main';
+@use 'blocks/intro/intro';
+@use 'blocks/intro/promo';
+@use 'blocks/intro/members';
+@use 'blocks/about';
+@use 'blocks/projects/projects';
+@use 'blocks/projects/project-simple';
+@use 'blocks/projects/project-big';
+@use 'blocks/contacts/contacts';
+@use 'blocks/contacts/contacts-map';
+@use 'blocks/contacts/contacts-form';
+@use 'blocks/footer';
