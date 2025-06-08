@@ -13,7 +13,7 @@
     "webp": "node convert-to-webp.js",
     "dev": "npm run webp && vite dev",
     "build": "npm run webp && vite build",
-    "build:dev": "vite build --mode development",
+    "build:dev": "npm run webp && vite build --mode development",
     "eslint": "eslint src/js/**/*.js",
     "prettify": "prettier --write ./dist/**/*.{html,css} --ignore-path .prettierignore",
     "fixScss": "npx stylelint ./dist/assets/**/*.css --fix --ignore-path .stylelintignore",

@@ -80,7 +80,11 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: getTemplateFiles('./src/pages'),
         output: {
-          assetFileNames({ originalFileNames }) {
+          assetFileNames({ originalFileNames, names }) {
+            if (/\.(css|sass|less)$/.test(names[0])) {
+              return 'css/[name]-[hash].css';
+            }
+
             if (originalFileNames && originalFileNames.length > 0) {
               const originalPath = originalFileNames[0];
               const assetIndex = originalPath.indexOf('assets/');
@@ -92,12 +96,10 @@ export default defineConfig(({ mode }) => {
             }
             return '[name][extname]';
           },
-          sourcemapFileNames: `sourcemaps/${JavaScriptFolderName}/[name].[hash].js.map`,
           chunkFileNames:
             mode === 'development' ? `${JavaScriptFolderName}/[name]-[hash].js` : `${JavaScriptFolderName}/[name]-[hash].min.js`,
         },
       },
-      sourcemap: mode === 'development' ? true : false,
       minify: mode === 'development' ? false : true,
       outDir: 'dist',
     },
