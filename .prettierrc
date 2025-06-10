@@ -4,11 +4,12 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "printWidth": 140,
+  "plugins": ["@awmottaz/prettier-plugin-void-html"],
   "overrides": [
     {
       "files": "*.hbs",
       "options": {
-        "parser": "angular",
+        "parser": "html",
         "singleQuote": false
       }
     }

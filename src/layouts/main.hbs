@@ -1,24 +1,21 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/src/styles/main.scss" />
-    <link rel="icon" href="/src/assets/favicon.ico" />
-    <link rel="icon" href="/src/assets/favicon-16x16.png" type="image/png" />
-    <link rel="icon" href="/src/assets/favicon-32x32.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/src/assets/apple-touch-icon.png" type="image/png" />
-    <link rel="manifest" href="/src/assets/manifest.webmanifest" />
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/src/styles/main.scss">
+    <link rel="icon" href="/src/assets/favicon.ico">
+    <link rel="icon" href="/src/assets/favicon-16x16.png" type="image/png">
+    <link rel="icon" href="/src/assets/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="/src/assets/apple-touch-icon.png" type="image/png">
+    <link rel="manifest" href="/src/assets/manifest.webmanifest">
     <script type="module" src="/src/js/main.js"></script>
   </head>
 
   <body>
-    {{> "components/header.hbs" }}
-
-    {{> @partial-block}}
-
-    {{> "components/footer.hbs" }}
+    {{> "components/header.hbs" }} {{> @partial-block}} {{> "components/footer.hbs" }}
   </body>
 </html>

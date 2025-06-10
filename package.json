@@ -13,13 +13,14 @@
     "webp": "node convert-to-webp.js",
     "dev": "npm run webp && vite dev",
     "build": "npm run webp && vite build",
-    "build:dev": "npm run webp && vite build --mode development",
+    "build:dev": "npm run webp && vite build --mode development && npm run prettify && npm run fixCss",
     "eslint": "eslint src/js/**/*.js",
     "prettify": "prettier --write ./dist/**/*.{html,css} --ignore-path .prettierignore",
-    "fixScss": "npx stylelint ./dist/assets/**/*.css --fix --ignore-path .stylelintignore",
+    "fixCss": "npx stylelint ./dist/assets/**/*.css --fix --ignore-path .stylelintignore",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@awmottaz/prettier-plugin-void-html": "^1.8.0",
     "@eslint/js": "^9.23.0",
     "@vitejs/plugin-legacy": "^6.0.2",
     "@vituum/vite-plugin-handlebars": "^1.1.0",
